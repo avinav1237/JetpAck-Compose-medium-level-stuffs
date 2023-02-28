@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SnackBar,TextFieldShow</string>
     <string name="title_activity_lists">Lists</string>
+    <string name="title_activity_constraint_layout">ConstraintLayout</string>
 </resources>

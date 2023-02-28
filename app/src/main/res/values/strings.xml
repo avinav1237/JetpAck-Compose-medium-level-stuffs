@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SnackBar,TextFieldShow</string>
+    <string name="title_activity_lists">Lists</string>
 </resources>

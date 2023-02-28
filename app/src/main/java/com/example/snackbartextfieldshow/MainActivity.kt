@@ -21,46 +21,46 @@ class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            val scaffoldState = rememberScaffoldState()
-            var textFieldState by  remember {
-                mutableStateOf("")
-            }
-            val scope = rememberCoroutineScope()
-            Scaffold(
-                modifier = Modifier
-                    .fillMaxSize(),
-                scaffoldState = scaffoldState
-            ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 30.dp)
-                ) {
-                    OutlinedTextField(
-                        value = textFieldState,
-                        label = {
-                            Text1(text = "Enter your name")
-                        },
-                        onValueChange = {
-                            textFieldState = it
-                        },
-                        siungleLine = true,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Button(onClick = {
-                        scope.launch {
-                            scaffoldState.snackbarHostState.showSnackbar("Hello $textFieldState")
-                        }
-                    }) {
-                        Text1(text = "pls greet me")
-                    }
-                }
-
-            }
-        }
+//        setContent {
+//            val scaffoldState = rememberScaffoldState()
+//            var textFieldState by  remember {
+//                mutableStateOf("")
+//            }
+//            val scope = rememberCoroutineScope()
+//            Scaffold(
+//                modifier = Modifier
+//                    .fillMaxSize(),
+//                scaffoldState = scaffoldState
+//            ) {
+//                Column(
+//                    horizontalAlignment = Alignment.CenterHorizontally,
+//                    verticalArrangement = Arrangement.Center,
+//                    modifier = Modifier
+//                        .fillMaxSize()
+//                        .padding(horizontal = 30.dp)
+//                ) {
+//                    OutlinedTextField(
+//                        value = textFieldState,
+//                        label = {
+//                            Text1(text = "Enter your name")
+//                        },
+//                        onValueChange = {
+//                            textFieldState = it
+//                        },
+//                        siungleLine = true,
+//                        modifier = Modifier.fillMaxWidth(),
+//                    )
+//                    Spacer(modifier = Modifier.height(16.dp))
+//                    Button(onClick = {
+//                        scope.launch {
+//                            scaffoldState.snackbarHostState.showSnackbar("Hello $textFieldState")
+//                        }
+//                    }) {
+//                        Text1(text = "pls greet me")
+//                    }
+//                }
+//
+//            }
+//        }
     }
 }
